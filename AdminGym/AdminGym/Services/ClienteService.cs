@@ -12,7 +12,7 @@ namespace AdminGym.Services
                 Apellido = "Demo",
                 Telefono = "123456789",
                 FechaNacimiento = new DateTime(1990, 1, 1),
-                TipoMembresia = "1 Mesde de Entrenamiento",
+                TipoMembresia = "1 Mes",
                 MembresiaInicio = new DateTime(2026, 7, 1),
                 MembresiaVencimiento = new DateTime(2026, 8, 1),
             }

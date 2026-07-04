@@ -159,9 +159,9 @@ class Program
                     string tipo = AnsiConsole.Prompt(
                         new SelectionPrompt<string>()
                             .AddChoices(
-                                "1 Día de Entrenamiento",
-                                "1 Semana de Entrenamiento",
-                                "1 Mes de Entrenamiento"
+                                "1 Día",
+                                "1 Semana",
+                                "1 Mes"
                             ));
 
                     DateTime membresiaInicio = DateTime.Today;
