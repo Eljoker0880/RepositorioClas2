@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AlanB\\Desktop\\Proyectos\\Proyectos\\AdminGym\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\proyectos\\proyectos\\admingym\\admingym\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\proyectos\\proyectos\\admingym\\admingym\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\proyectos\\proyectos\\admingym\\admingym\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\Proyectos\\Proyectos\\AdminGym\\AdminGym\\Program.cs",
+              "RelativeDocumentMoniker": "AdminGym\\Program.cs",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\Proyectos\\Proyectos\\AdminGym\\AdminGym\\Program.cs",
+              "RelativeToolTip": "AdminGym\\Program.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAowMUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T01:31:52.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClienteService.cs",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\Proyectos\\Proyectos\\AdminGym\\AdminGym\\Services\\ClienteService.cs",
+              "RelativeDocumentMoniker": "AdminGym\\Services\\ClienteService.cs",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\Proyectos\\Proyectos\\AdminGym\\AdminGym\\Services\\ClienteService.cs",
+              "RelativeToolTip": "AdminGym\\Services\\ClienteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T13:59:26.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\Proyectos\\Proyectos\\AdminGym\\AdminGym\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "AdminGym\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\Proyectos\\Proyectos\\AdminGym\\AdminGym\\Models\\Cliente.cs",
+              "RelativeToolTip": "AdminGym\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T13:52:46.269Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

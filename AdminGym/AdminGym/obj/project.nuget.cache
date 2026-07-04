@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "njowGt+dZgk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AlanB\\Desktop\\Proyectos\\Proyectos\\AdminGym\\AdminGym\\AdminGym.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AlanB\\.nuget\\packages\\sixlabors.imagesharp\\3.1.12\\sixlabors.imagesharp.3.1.12.nupkg.sha512",
+    "C:\\Users\\AlanB\\.nuget\\packages\\spectre.console\\0.57.2\\spectre.console.0.57.2.nupkg.sha512",
+    "C:\\Users\\AlanB\\.nuget\\packages\\spectre.console.analyzer\\1.0.0\\spectre.console.analyzer.1.0.0.nupkg.sha512",
+    "C:\\Users\\AlanB\\.nuget\\packages\\spectre.console.ansi\\0.57.2\\spectre.console.ansi.0.57.2.nupkg.sha512",
+    "C:\\Users\\AlanB\\.nuget\\packages\\spectre.console.cli\\0.55.0\\spectre.console.cli.0.55.0.nupkg.sha512",
+    "C:\\Users\\AlanB\\.nuget\\packages\\spectre.console.cli.testing\\0.55.0\\spectre.console.cli.testing.0.55.0.nupkg.sha512",
+    "C:\\Users\\AlanB\\.nuget\\packages\\spectre.console.extensions.progress\\1.0.2\\spectre.console.extensions.progress.1.0.2.nupkg.sha512",
+    "C:\\Users\\AlanB\\.nuget\\packages\\spectre.console.extensions.table\\1.0.2\\spectre.console.extensions.table.1.0.2.nupkg.sha512",
+    "C:\\Users\\AlanB\\.nuget\\packages\\spectre.console.imagesharp\\0.57.2\\spectre.console.imagesharp.0.57.2.nupkg.sha512",
+    "C:\\Users\\AlanB\\.nuget\\packages\\spectre.console.json\\0.57.2\\spectre.console.json.0.57.2.nupkg.sha512",
+    "C:\\Users\\AlanB\\.nuget\\packages\\spectre.console.testing\\0.57.2\\spectre.console.testing.0.57.2.nupkg.sha512"
+  ],
+  "logs": []
+}
