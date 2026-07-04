@@ -464,11 +464,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AlanB\\Desktop\\Proyectos\\Proyectos\\AdminGym\\AdminGym\\AdminGym.csproj",
+      "projectUniqueName": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\AdminGym.csproj",
       "projectName": "AdminGym",
-      "projectPath": "C:\\Users\\AlanB\\Desktop\\Proyectos\\Proyectos\\AdminGym\\AdminGym\\AdminGym.csproj",
+      "projectPath": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\AdminGym.csproj",
       "packagesPath": "C:\\Users\\AlanB\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AlanB\\Desktop\\Proyectos\\Proyectos\\AdminGym\\AdminGym\\obj\\",
+      "outputPath": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AlanB\\AppData\\Roaming\\NuGet\\NuGet.Config",
