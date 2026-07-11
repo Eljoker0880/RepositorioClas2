@@ -4,11 +4,11 @@ public class Membresia
 {
     public int id { get; set; }
 
-    public string TipoMembresia { get; set; }
+    public string Tipo { get; set; }
 
-    public DateTime MembresiaInicio { get; set; }
+    public DateTime Inscripcion { get; set; }
 
-    public DateTime MembresiaVencimiento { get; set; }
+    public DateTime Vencimiento { get; set; }
 
-    public int MiembroId { get; set; }
+    public int id_miembro { get; set; }
 }

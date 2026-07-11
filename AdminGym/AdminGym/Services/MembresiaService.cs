@@ -7,10 +7,10 @@
             new Membresia
             {
                 id = 1,
-                TipoMembresia = "1 Mes",
-                MembresiaInicio = new DateTime(2026, 7, 1),
-                MembresiaVencimiento = new DateTime(2026, 8, 1),
-                MiembroId = 1
+                Tipo = "1 Mes",
+                Inscripcion = new DateTime(2026, 7, 1),
+                Vencimiento = new DateTime(2026, 8, 1),
+                id_miembro = 1
             }
         ];
 
@@ -24,6 +24,7 @@
             _membresias.Add(membresia);
             return true;
         }
+
 
         public bool Delete(int id)
         {
@@ -45,7 +46,7 @@
 
         public Membresia? FindByMiembroId(int miembroId)
         {
-            return _membresias.FirstOrDefault(m => m.MiembroId == miembroId);
+            return _membresias.FirstOrDefault(m => m.id_miembro == miembroId);
         }
     }
 }

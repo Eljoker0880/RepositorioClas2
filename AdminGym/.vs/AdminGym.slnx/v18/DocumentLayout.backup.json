@@ -13,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\services\\miembroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\services\\miembroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\models\\miembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\models\\miembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\models\\menmbresia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\models\\menmbresia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -32,9 +40,36 @@
               "RelativeDocumentMoniker": "AdminGym\\Services\\MembresiaService.cs",
               "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Services\\MembresiaService.cs",
               "RelativeToolTip": "AdminGym\\Services\\MembresiaService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwDIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T10:43:04.151Z"
+              "WhenOpened": "2026-07-11T18:54:32.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Menmbresia.cs",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Models\\Menmbresia.cs",
+              "RelativeDocumentMoniker": "AdminGym\\Models\\Menmbresia.cs",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Models\\Menmbresia.cs",
+              "RelativeToolTip": "AdminGym\\Models\\Menmbresia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T10:36:08.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Miembro.cs",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Models\\Miembro.cs",
+              "RelativeDocumentMoniker": "AdminGym\\Models\\Miembro.cs",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Models\\Miembro.cs",
+              "RelativeToolTip": "AdminGym\\Models\\Miembro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T10:35:00.696Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -44,9 +79,10 @@
               "RelativeDocumentMoniker": "AdminGym\\Services\\MiembroService.cs",
               "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Services\\MiembroService.cs",
               "RelativeToolTip": "AdminGym\\Services\\MiembroService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T10:24:31.194Z"
+              "WhenOpened": "2026-07-07T10:24:31.194Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -54,9 +90,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Program.cs",
               "RelativeDocumentMoniker": "AdminGym\\Program.cs",
-              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Program.cs",
-              "RelativeToolTip": "AdminGym\\Program.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAwFkAAAAyAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Program.cs*",
+              "RelativeToolTip": "AdminGym\\Program.cs*",
+              "ViewState": "AgIAAK0BAAAAAAAAAAAUwLwBAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-04T01:31:52.677Z",
               "EditorCaption": ""

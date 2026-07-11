@@ -10,7 +10,7 @@
                 Nombre = "Demo",
                 Apellido = "Demo",
                 Telefono = "123456789",
-                FechaNacimiento = new DateTime(1990, 1, 1)
+                Fecha = new DateTime(1990, 1, 1)
             }
         ];
 
