@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\database\\queries.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\database\\admingym.db||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\database\\admingym.db||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
@@ -18,24 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Program.cs",
+              "RelativeDocumentMoniker": "AdminGym\\Program.cs",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Program.cs",
+              "RelativeToolTip": "AdminGym\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:06:17.045Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "queries.sql",
               "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Database\\queries.sql",
               "RelativeDocumentMoniker": "AdminGym\\Database\\queries.sql",
-              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Database\\queries.sql",
-              "RelativeToolTip": "AdminGym\\Database\\queries.sql",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Database\\queries.sql*",
+              "RelativeToolTip": "AdminGym\\Database\\queries.sql*",
+              "ViewState": "AgIAACgAAAAAAAAAAAAIwDsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2026-07-12T03:06:32.08Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AdminGym.db",
               "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Database\\AdminGym.db",
               "RelativeDocumentMoniker": "AdminGym\\Database\\AdminGym.db",
@@ -43,8 +60,7 @@
               "RelativeToolTip": "AdminGym\\Database\\AdminGym.db",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI8SURBVDhPdVNLT1NBGD3a23gJKaJUwsIEUaMoL2NsGyqxoCYEDRuKi0ZW3WHkL0D8BWqkJsLKQlsX9bGrNhqqRKRutCVp1BhFEiUxVyVx0Ud67/DN3EcvsZ7ck2/uN9/MnDkzswsGYrEY0xgD0zQwippGbabBzPEoORxb5Upl6Nrk5HsxiBeaWFhcZKqqWqxyVmuMx\u002BOsUCiwufn5P3dmI6eMYdhtRLEKh0pRVTlVQZpIkMPtduOs398sSdKSSBBqE5hqKJBovW1B/49Go0ilUihXys0iQZCMKPbMYQ7OrmaRza7C6/PBRxwbC4oe8gGzkYio4bApIPOM9v3oAppa23DpSgiyuw13781ZfRwa1ZqwJuAu86p8Lg//uQA6D7cjt/IKPUcOof/CMNbyearSp6HjEpHjHxMzmSU0NjTgUTKJUCiEJw\u002BT2OtyUT5DKkXJjtPbqYAQGBxEsVhEcHwciUQCl0dHsf5tA1W5CS\u002BWV1AqlcivOlvQZTH09vTi9fJLfF7fgGcggHcfvkBpbEc4HIay/zje5tb\u002Bp0A3kXPi6gSUzR94/CCON3Qaw8da8PzrX4x0HsD3n7/rm1i7BxSJHq8X16em4OnrRvrTL1zscOHpRwVn\u002Brrqmyjugf4JmjjdfQL7lALSz9Locm7hYGuL5ReHTUFNlgAVcVV7ZBlDA/0IjpzHyaMdkOnfXmvzgN9BenGSQ6dTgrMORa1tC9ZzvnnrNm2NjKROvjI/KhGNnFiA2vozZ7gxM01jgW0oG0\u002BFgH6cagAAAABJRU5ErkJggg==",
-              "WhenOpened": "2026-07-12T03:03:52.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-12T03:03:52.495Z"
             }
           ]
         }

@@ -52,7 +52,8 @@ INNER JOIN Membresia b ON b.id_miembro = m.id
 WHERE datetime(b.Vencimiento) > datetime('now');
 
 -- 3) Ejemplo: contar miembros por tipo de membresía
-SELECT b.Tipo, COUNT(*) AS Cantidad
+SELECT b.T
+ipo, COUNT(*) AS Cantidad
 FROM Membresia b
 GROUP BY b.Tipo;
 
