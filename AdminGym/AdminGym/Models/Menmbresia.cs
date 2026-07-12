@@ -1,10 +1,11 @@
 ﻿namespace AdminGym.Models;
 
+
 public class Membresia
 {
     public int id { get; set; }
 
-    public string Tipo { get; set; }
+    public required string Tipo { get; set; }
 
     public DateTime Inscripcion { get; set; }
 

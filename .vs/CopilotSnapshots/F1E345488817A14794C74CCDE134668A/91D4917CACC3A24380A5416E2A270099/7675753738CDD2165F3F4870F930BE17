@@ -194,7 +194,7 @@ class Program
         );
 
         layout["Miembros"].Update(
-            new Panel(CrearTablaMenuResumen(limite: 6))
+            new Panel(CrearTablaDetallada(limite: 6))
                 .Header("[blue]MIEMBROS[/]")
                 .BorderColor(Color.Blue)
         );

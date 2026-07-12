@@ -111,69 +111,6 @@ class Program
         return table;
     }
 
-    // Tabla resumida usada en el panel del menú principal: muestra sólo
-    // Td, Nombre, Apellido, Teléfono, Tipo y Estado (vista previa limitada).
-    public static Table CrearTablaMenuResumen(int? limite = null)
-    {
-        var table = new Table();
-        table.Border(TableBorder.Rounded);
-
-        table.AddColumn(new TableColumn("Td").Width(8).NoWrap());
-        table.AddColumn(new TableColumn("Nombre").Width(20).NoWrap());
-        table.AddColumn(new TableColumn("Apellido").Width(20).NoWrap());
-        table.AddColumn(new TableColumn("Teléfono").Width(24).NoWrap());
-        table.AddColumn(new TableColumn("Tipo").Width(22).NoWrap());
-        table.AddColumn(new TableColumn("Estado").Width(22).NoWrap());
-
-        List<Miembro> miembros = miembroService.FindAll();
-
-        if (limite.HasValue)
-            miembros = miembros.Take(limite.Value).ToList();
-
-        foreach (Miembro miembro in miembros)
-        {
-            Membresia? membresia = membresiaService.FindByMiembroId(miembro.id);
-
-            string estado = "[grey]Sin membresía[/]";
-
-            if (membresia != null)
-            {
-                TimeSpan tiempoRestante = membresia.Vencimiento - DateTime.Now;
-
-                if (tiempoRestante.TotalSeconds < 0)
-                {
-                    estado = "[red]🔴 Vencida[/]";
-                }
-                else
-                {
-                    double alertaSegundos = 15 * 24 * 60 * 60; // 15 días
-
-                    if (membresia.Tipo == "30 Segundos")
-                        alertaSegundos = 10;
-                    else if (membresia.Tipo == "1 Día")
-                        alertaSegundos = 24 * 60 * 60;
-                    else if (membresia.Tipo == "1 Semana")
-                        alertaSegundos = 3 * 24 * 60 * 60;
-
-                    estado = tiempoRestante.TotalSeconds <= alertaSegundos
-                        ? "[yellow]🟡 Próxima a vencer[/]"
-                        : "[green]🟢 Activo[/]";
-                }
-            }
-
-            table.AddRow(
-                miembro.id.ToString(),
-                miembro.Nombre,
-                miembro.Apellido,
-                miembro.Telefono,
-                membresia?.Tipo ?? "-",
-                estado
-            );
-        }
-
-        return table;
-    }
-
     // FIX: ahora el panel de miembros (izquierda) y el panel de menú (derecha)
     // se muestran uno al lado del otro con Layout.SplitColumns, y ambos tienen
     // contenido real: la tabla detallada y las opciones interactivas.
@@ -194,7 +131,7 @@ class Program
         );
 
         layout["Miembros"].Update(
-            new Panel(CrearTablaMenuResumen(limite: 6))
+            new Panel(CrearTablaDetallada(limite: 6))
                 .Header("[blue]MIEMBROS[/]")
                 .BorderColor(Color.Blue)
         );
