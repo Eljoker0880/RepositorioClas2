@@ -1,60 +1,80 @@
--- Script de creación y datos base para AdminGym
--- Tablas: Miembro, Membresia
--- Claves primarias y foráneas incluidas
+global using AdminGym.Models;
+using AdminGym.Services;
+using Spectre.Console;
+using System.IO;
 
-PRAGMA foreign_keys = ON;
+class Program
+{
+    public static bool running = true;
+    public static MiembroService miembroService = new MiembroService();
+    public static MembresiaService membresiaService = new MembresiaService();
 
-CREATE TABLE IF NOT EXISTS Miembro (
-	id INTEGER PRIMARY KEY,
-	Nombre TEXT NOT NULL,
-	Apellido TEXT NOT NULL,
-	Telefono TEXT NOT NULL,
-	Fecha TEXT NOT NULL -- guardar fecha en formato ISO (YYYY-MM-DD)
-);
+    public static void LimpiarConsola()
+    {
+        try
+        {
+            Console.Write("\u001b[2J\u001b[H");
+        }
+        catch (IOException)
+        {
+            AnsiConsole.Clear();
+        }
+    }
 
-CREATE TABLE IF NOT EXISTS Membresia (
-	id INTEGER PRIMARY KEY,
-	Tipo TEXT NOT NULL,
-	Inscripcion TEXT NOT NULL, -- fecha ISO
-	Vencimiento TEXT NOT NULL, -- fecha ISO
-	id_miembro INTEGER NOT NULL,
-	FOREIGN KEY (id_miembro) REFERENCES Miembro(id) ON DELETE CASCADE
-);
+    public static Table CrearTablaDetallada(int? limite = null)
+    {
+        var table = new Table();
+        table.Border(TableBorder.Rounded);
 
--- Datos de ejemplo (coinciden con los valores usados en los servicios en memoria)
-INSERT INTO Miembro (id, Nombre, Apellido, Telefono, Fecha) VALUES
-(1, 'Demo', 'Demo', '123456789', '1990-01-01');
+        table.AddColumn(new TableColumn("Id").Width(6).NoWrap());
+        table.AddColumn(new TableColumn("Nombre").Width(16).NoWrap());
+        table.AddColumn(new TableColumn("Apellido").Width(16).NoWrap());
+        table.AddColumn(new TableColumn("Teléfono").Width(16).NoWrap());
+        table.AddColumn(new TableColumn("Tipo").Width(14).NoWrap());
+        table.AddColumn(new TableColumn("Inicio").Width(14).NoWrap());
+        table.AddColumn(new TableColumn("Vencimiento").Width(14).NoWrap());
+        table.AddColumn(new TableColumn("Estado").Width(20).NoWrap());
 
-INSERT INTO Membresia (id, Tipo, Inscripcion, Vencimiento, id_miembro) VALUES
-(1, '1 Mes', '2026-07-01', '2026-08-01', 1);
+        List<Miembro> miembros = miembroService.FindAll();
 
--- Consultas de ejemplo usando INNER JOIN
--- 1) Selección simple con INNER JOIN (mostrar Td, Nombre, Apellido, Teléfono, Tipo, Estado)
-SELECT
-	m.id AS Td,
-	m.Nombre,
-	m.Apellido,
-	m.Telefono,
-	COALESCE(b.Tipo, '-') AS Tipo,
-	CASE
-		WHEN b.Vencimiento IS NULL THEN 'Sin membresía'
-		WHEN datetime('now') > datetime(b.Vencimiento) THEN 'Vencida'
-		WHEN (julianday(b.Vencimiento) - julianday('now')) <= 15 THEN 'Próxima a vencer'
-		ELSE 'Activo'
-	END AS Estado
-FROM Miembro m
-LEFT JOIN Membresia b ON b.id_miembro = m.id;
+        if (limite.HasValue)
+            miembros = miembros.Take(limite.Value).ToList();
 
--- 2) Ejemplo: listar sólo miembros activos
-SELECT m.id, m.Nombre, m.Apellido, b.Tipo, b.Vencimiento
-FROM Miembro m
-INNER JOIN Membresia b ON b.id_miembro = m.id
-WHERE datetime(b.Vencimiento) > datetime('now');
+        foreach (Miembro miembro in miembros)
+        {
+            Membresia? membresia = membresiaService.FindByMiembroId(miembro.id);
 
--- 3) Ejemplo: contar miembros por tipo de membresía
-SELECT b.T
-ipo, COUNT(*) AS Cantidad
-FROM Membresia b
-GROUP BY b.Tipo;
+            string estado = "[grey]Sin membresía[/]";
+            string vencimiento = membresia?.Vencimiento.ToString("dd/MM/yyyy") ?? "-";
 
--- Fin del script
+            if (membresia != null)
+            {
+                TimeSpan tiempoRestante = membresia.Vencimiento - DateTime.Now;
+
+                if (tiempoRestante.TotalSeconds < 0)
+                {
+                    estado = "[red]🔴 Vencida[/]";
+                }
+                else
+                {
+                    double alertaSegundos = 15 * 24 * 60 * 60;
+
+                    if (membresia.Tipo == "30 Segundos")
+                        alertaSegundos = 10;
+                    else if (membresia.Tipo == "1 Día")
+                        alertaSegundos = 24 * 60 * 60;
+                    else if (membresia.Tipo == "1 Semana")
+                        alertaSegundos = 3 * 24 * 60 * 60;
+
+                    estado = tiempoRestante.TotalSeconds <= alertaSegundos
+                        ? "[yellow]🟡 Próxima a vencer[/]"
+                        : "[green]🟢 Activo[/]";
+                }
+            }
+
+            table.AddRow(
+                miembro.id.ToString(),
+                miembro.Nombre,
+                miembro.Apellido,
+                miembro.Telefono,
+                membresia?.Tipo ?? "-",

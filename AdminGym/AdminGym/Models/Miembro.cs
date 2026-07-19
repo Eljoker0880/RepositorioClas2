@@ -1,4 +1,4 @@
-﻿namespace AdminGym.Models;
+namespace AdminGym.Models;
 
 public class Miembro
 {
@@ -8,4 +8,3 @@ public class Miembro
     public required string Telefono { get; set; }
     public DateTime Fecha { get; set; }
 }
-

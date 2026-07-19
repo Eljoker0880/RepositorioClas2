@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\database\\queries.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\database\\queries.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\screens\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\screens\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\repositories\\miembrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\repositories\\miembrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\repositories\\membresiarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\repositories\\membresiarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\models\\miembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\models\\miembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\database\\queries.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|solutionrelative:admingym\\database\\queries.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CAC7F86-069A-7018-65B0-7AA7ACAD9B9A}|AdminGym\\AdminGym.csproj|c:\\users\\alanb\\desktop\\repositorioclas2\\repositorioclas2\\admingym\\admingym\\database\\admingym.db||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -22,37 +38,87 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Program.cs",
-              "RelativeDocumentMoniker": "AdminGym\\Program.cs",
-              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Program.cs",
-              "RelativeToolTip": "AdminGym\\Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MainScreen.cs",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Screens\\MainScreen.cs",
+              "RelativeDocumentMoniker": "AdminGym\\Screens\\MainScreen.cs",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Screens\\MainScreen.cs",
+              "RelativeToolTip": "AdminGym\\Screens\\MainScreen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-12T12:06:17.045Z",
+              "WhenOpened": "2026-07-19T00:38:46.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "queries.sql",
-              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Database\\queries.sql",
-              "RelativeDocumentMoniker": "AdminGym\\Database\\queries.sql",
-              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Database\\queries.sql",
-              "RelativeToolTip": "AdminGym\\Database\\queries.sql",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-07-12T03:06:32.08Z",
+              "DocumentIndex": 1,
+              "Title": "MiembroRepository.cs",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Repositories\\MiembroRepository.cs",
+              "RelativeDocumentMoniker": "AdminGym\\Repositories\\MiembroRepository.cs",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Repositories\\MiembroRepository.cs",
+              "RelativeToolTip": "AdminGym\\Repositories\\MiembroRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T00:38:37.517Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "MembresiaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Repositories\\MembresiaRepository.cs",
+              "RelativeDocumentMoniker": "AdminGym\\Repositories\\MembresiaRepository.cs",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Repositories\\MembresiaRepository.cs",
+              "RelativeToolTip": "AdminGym\\Repositories\\MembresiaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T00:38:35.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Miembro.cs",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Models\\Miembro.cs",
+              "RelativeDocumentMoniker": "AdminGym\\Models\\Miembro.cs",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Models\\Miembro.cs",
+              "RelativeToolTip": "AdminGym\\Models\\Miembro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-18T14:15:06.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Program.cs",
+              "RelativeDocumentMoniker": "AdminGym\\Program.cs",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Program.cs",
+              "RelativeToolTip": "AdminGym\\Program.cs",
+              "ViewState": "AgIAAJ0CAAAAAAAAAAApwL8CAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:06:17.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "queries.sql",
+              "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Database\\queries.sql",
+              "RelativeDocumentMoniker": "AdminGym\\Database\\queries.sql",
+              "ToolTip": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Database\\queries.sql",
+              "RelativeToolTip": "AdminGym\\Database\\queries.sql",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-07-12T03:06:32.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AdminGym.db",
               "DocumentMoniker": "C:\\Users\\AlanB\\Desktop\\RepositorioClas2\\RepositorioClas2\\AdminGym\\AdminGym\\Database\\AdminGym.db",
               "RelativeDocumentMoniker": "AdminGym\\Database\\AdminGym.db",

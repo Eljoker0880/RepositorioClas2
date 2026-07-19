@@ -1,61 +1,29 @@
-﻿namespace AdminGym.Services
+using AdminGym.Models;
+using AdminGym.Repositories;
+
+namespace AdminGym.Services;
+
+public class MiembroService(MiembroRepository miembroRepository)
 {
-    public class MiembroService
+    private readonly MiembroRepository _repository = miembroRepository;
+
+    public List<Miembro> FindAll()
     {
-        private readonly List<Miembro> _miembros =
-        [
-            new Miembro
-            {
-                id = 1,
-                Nombre = "Demo",
-                Apellido = "Demo",
-                Telefono = "123456789",
-                Fecha = new DateTime(1990, 1, 1)
-            }
-        ];
+        return _repository.FindAll();
+    }
 
-        public List<Miembro> FindAll()
-        {
-            return _miembros;
-        }
+    public bool Create(Miembro miembro)
+    {
+        return _repository.Create(miembro);
+    }
 
-        public bool Create(Miembro miembro)
-        {
-            _miembros.Add(miembro);
-            return true;
-        }
+    public bool Delete(int id)
+    {
+        return _repository.Delete(id);
+    }
 
-        public bool Delete(int id)
-        {
-            Miembro? miembro = _miembros.FirstOrDefault(m => m.id == id);
-
-            if (miembro == null)
-            {
-                return false;
-            }
-
-            _miembros.Remove(miembro);
-            return true;
-        }
-
-        public Miembro? FindById(int id)
-        {
-            return _miembros.FirstOrDefault(m => m.id == id);
-        }
+    public Miembro? FindById(int id)
+    {
+        return _repository.FindById(id);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
