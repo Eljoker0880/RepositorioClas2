@@ -1,3 +1,4 @@
+using AdminGym.Data;
 using AdminGym.Repositories;
 using AdminGym.Screens;
 using AdminGym.Services;
@@ -6,15 +7,20 @@ class Program
 {
     public static void Main(string[] args)
     {
-        // Se mantiene el buffer de pantalla alterna: evita que terminales
-        // basadas en bloques mezclen el historial de comandos con las
-        // pantallas redibujadas de la app.
         Console.Write("\u001b[?1049h");
 
         try
         {
-            MiembroRepository miembroRepository = new();
-            MembresiaRepository membresiaRepository = new();
+            string folder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database");
+
+            Directory.CreateDirectory(folder);
+
+            string dbPath = Path.Combine(folder, "AdminGym.db");
+
+            Database database = new(dbPath);
+
+            MiembroRepository miembroRepository = new(database);
+            MembresiaRepository membresiaRepository = new(database);
 
             MiembroService miembroService = new(miembroRepository);
             MembresiaService membresiaService = new(membresiaRepository);
@@ -22,6 +28,11 @@ class Program
             MainScreen screen = new(miembroService, membresiaService);
 
             screen.Show();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+            Console.ReadKey();
         }
         finally
         {

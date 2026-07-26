@@ -75,12 +75,12 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
         var table = new Table();
         table.Border(TableBorder.Rounded);
 
-        table.AddColumn(new TableColumn("Td").Width(4).NoWrap());
-        table.AddColumn(new TableColumn("Nombre").Width(10).NoWrap());
-        table.AddColumn(new TableColumn("Apellido").Width(10).NoWrap());
-        table.AddColumn(new TableColumn("Teléfono").Width(12).NoWrap());
-        table.AddColumn(new TableColumn("Tipo").Width(13).NoWrap());
-        table.AddColumn(new TableColumn("Estado").Width(22).NoWrap());
+        table.AddColumn(new TableColumn("[blue]Td[/]").Width(4).NoWrap());
+        table.AddColumn(new TableColumn("[blue]Nombre[/]").Width(10).NoWrap());
+        table.AddColumn(new TableColumn("[blue]Apellido[/]").Width(10).NoWrap());
+        table.AddColumn(new TableColumn("[blue]Teléfono[/]").Width(12).NoWrap());
+        table.AddColumn(new TableColumn("[blue]Tipo[/]").Width(13).NoWrap());
+        table.AddColumn(new TableColumn("[blue]Estado[/]").Width(22).NoWrap());
 
         List<Miembro> miembros = _miembroService.FindAll();
 
@@ -92,13 +92,13 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
             Membresia? membresia = _membresiaService.FindByMiembroId(miembro.id);
 
             table.AddRow(
-                miembro.id.ToString(),
-                miembro.Nombre,
-                miembro.Apellido,
-                miembro.Telefono,
-                membresia?.Tipo ?? "-",
-                _membresiaService.CalcularEstado(membresia)
-            );
+                            miembro.id.ToString(),
+                            miembro.Nombre,
+                            miembro.Apellido,
+                            miembro.Telefono,
+                            membresia?.Tipo ?? "-",
+                            _membresiaService.CalcularEstado(membresia)
+                        );
         }
 
         return table;
@@ -256,8 +256,8 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
 
         var resumen = new Table();
         resumen.Border(TableBorder.Rounded);
-        resumen.AddColumn("Campo");
-        resumen.AddColumn("Valor");
+        resumen.AddColumn("[cyan]Campo[/]");
+        resumen.AddColumn("[cyan]Valor[/]");
         resumen.AddRow("Nombre", $"{nombre} {apellido}");
         resumen.AddRow("Teléfono", telefono);
         resumen.AddRow("Fecha de nacimiento", fechaNacimiento.ToString("dd/MM/yyyy"));
@@ -332,14 +332,14 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
         var tablaBusqueda = new Table();
         tablaBusqueda.Border(TableBorder.Rounded);
 
-        tablaBusqueda.AddColumn("Id");
-        tablaBusqueda.AddColumn("Nombre");
-        tablaBusqueda.AddColumn("Apellido");
-        tablaBusqueda.AddColumn("Teléfono");
-        tablaBusqueda.AddColumn("Tipo");
-        tablaBusqueda.AddColumn("Inicio");
-        tablaBusqueda.AddColumn("Vencimiento");
-        tablaBusqueda.AddColumn("Estado");
+        tablaBusqueda.AddColumn("[green]Id[/]");
+        tablaBusqueda.AddColumn("[green]Nombre[/]");
+        tablaBusqueda.AddColumn("[green]Apellido[/]");
+        tablaBusqueda.AddColumn("[green]Teléfono[/]");
+        tablaBusqueda.AddColumn("[green]Tipo[/]");
+        tablaBusqueda.AddColumn("[green]Inicio[/]");
+        tablaBusqueda.AddColumn("[green]Vencimiento[/]");
+        tablaBusqueda.AddColumn("[green]Estado[/]");
 
         Membresia? membresia = _membresiaService.FindByMiembroId(miembroEncontrado.id);
 
@@ -434,11 +434,11 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
             var tablaEliminar = new Table();
             tablaEliminar.Border(TableBorder.Rounded);
 
-            tablaEliminar.AddColumn("ID");
-            tablaEliminar.AddColumn("Nombre");
-            tablaEliminar.AddColumn("Apellido");
-            tablaEliminar.AddColumn("Tipo");
-            tablaEliminar.AddColumn("Estado");
+            tablaEliminar.AddColumn("[yellow]ID[/]");
+            tablaEliminar.AddColumn("[yellow]Nombre[/]");
+            tablaEliminar.AddColumn("[yellow]Apellido[/]");
+            tablaEliminar.AddColumn("[yellow]Tipo[/]");
+            tablaEliminar.AddColumn("[yellow]Estado[/]");
 
             foreach (Miembro m in _miembroService.FindAll())
             {
