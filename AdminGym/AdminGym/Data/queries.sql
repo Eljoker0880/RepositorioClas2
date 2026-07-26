@@ -8,6 +8,15 @@ class Program
     public static bool running = true;
     public static MiembroService miembroService = new MiembroService();
     public static MembresiaService membresiaService = new MembresiaService();
+    public const string UpdateMiembro = @"
+    UPDATE miembros
+    SET
+        nombre=@nombre,
+        apellido=@apellido,
+        telefono=@telefono,
+        fecha=@fecha
+    WHERE id=@id;
+";
 
     public static void LimpiarConsola()
     {

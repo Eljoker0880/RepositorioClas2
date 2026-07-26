@@ -43,7 +43,40 @@ public class MiembroRepository
         return miembros;
     }
 
-    public bool Create(Miembro miembro)
+
+    public int Create(Miembro miembro)
+    {
+        {
+            using SqliteConnection connection = _database.GetConnection();
+            connection.Open();
+
+            SqliteCommand command = connection.CreateCommand();
+
+            command.CommandText = @"
+            INSERT INTO miembros
+            (nombre, apellido, telefono, fecha)
+            VALUES
+            ($nombre, $apellido, $telefono, $fecha)";
+
+            command.Parameters.AddWithValue("$nombre", miembro.Nombre);
+            command.Parameters.AddWithValue("$apellido", miembro.Apellido);
+            command.Parameters.AddWithValue("$telefono", miembro.Telefono);
+            command.Parameters.AddWithValue("$fecha", miembro.Fecha.ToString("yyyy-MM-dd"));
+
+            command.ExecuteNonQuery();
+
+            SqliteCommand idCommand = connection.CreateCommand();
+
+            idCommand.CommandText = "SELECT last_insert_rowid();";
+
+            long idGenerado = (long)idCommand.ExecuteScalar();
+
+            return (int)idGenerado;
+        }
+    }
+
+
+    public bool Update(Miembro miembro)
     {
         using SqliteConnection connection = _database.GetConnection();
         connection.Open();
@@ -51,11 +84,16 @@ public class MiembroRepository
         SqliteCommand command = connection.CreateCommand();
 
         command.CommandText = @"
-            INSERT INTO miembros
-            (nombre, apellido, telefono, fecha)
-            VALUES
-            ($nombre, $apellido, $telefono, $fecha)";
+            UPDATE miembros
+            SET
+                nombre = $nombre,
+                apellido = $apellido,
+                telefono = $telefono,
+                fecha = $fecha
+            WHERE id = $id;
+        ";
 
+        command.Parameters.AddWithValue("$id", miembro.id);
         command.Parameters.AddWithValue("$nombre", miembro.Nombre);
         command.Parameters.AddWithValue("$apellido", miembro.Apellido);
         command.Parameters.AddWithValue("$telefono", miembro.Telefono);
@@ -63,6 +101,7 @@ public class MiembroRepository
 
         return command.ExecuteNonQuery() > 0;
     }
+
 
     public bool Delete(int id)
     {
@@ -72,10 +111,12 @@ public class MiembroRepository
         SqliteCommand command = connection.CreateCommand();
 
         command.CommandText = "DELETE FROM miembros WHERE id = $id";
+
         command.Parameters.AddWithValue("$id", id);
 
         return command.ExecuteNonQuery() > 0;
     }
+
 
     public Miembro? FindById(int id)
     {

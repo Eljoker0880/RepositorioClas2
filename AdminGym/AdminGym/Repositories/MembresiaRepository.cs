@@ -6,6 +6,28 @@ namespace AdminGym.Repositories;
 
 public class MembresiaRepository
 {
+    public bool Update(Membresia membresia)
+    {
+        using SqliteConnection connection = _database.GetConnection();
+        connection.Open();
+
+        SqliteCommand command = connection.CreateCommand();
+
+        command.CommandText = @"
+        UPDATE membresias
+        SET
+            tipo = $tipo,
+            inscripcion = $inscripcion,
+            vencimiento = $vencimiento
+        WHERE id = $id";
+
+        command.Parameters.AddWithValue("$id", membresia.id);
+        command.Parameters.AddWithValue("$tipo", membresia.Tipo);
+        command.Parameters.AddWithValue("$inscripcion", membresia.Inscripcion.ToString("yyyy-MM-dd HH:mm:ss"));
+        command.Parameters.AddWithValue("$vencimiento", membresia.Vencimiento.ToString("yyyy-MM-dd HH:mm:ss"));
+
+        return command.ExecuteNonQuery() > 0;
+    }
     private readonly Database _database;
 
     public MembresiaRepository(Database database)

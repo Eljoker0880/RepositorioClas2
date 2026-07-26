@@ -6,6 +6,10 @@ namespace AdminGym.Services;
 public class MembresiaService(MembresiaRepository membresiaRepository)
 {
     private readonly MembresiaRepository _repository = membresiaRepository;
+    public bool Update(Membresia membresia)
+    {
+        return _repository.Update(membresia);
+    }
 
     public List<Membresia> FindAll()
     {
@@ -47,9 +51,7 @@ public class MembresiaService(MembresiaRepository membresiaRepository)
 
         double alertaSegundos = 15 * 24 * 60 * 60;
 
-        if (membresia.Tipo == "30 Segundos")
-            alertaSegundos = 10;
-        else if (membresia.Tipo == "1 Día")
+        if (membresia.Tipo == "1 Día")
             alertaSegundos = 24 * 60 * 60;
         else if (membresia.Tipo == "1 Semana")
             alertaSegundos = 3 * 24 * 60 * 60;
@@ -65,10 +67,11 @@ public class MembresiaService(MembresiaRepository membresiaRepository)
     {
         return tipo switch
         {
-            "30 Segundos" => desde.AddSeconds(30),
             "1 Día" => desde.AddDays(1),
             "1 Semana" => desde.AddDays(7),
+            "1 Mes" => desde.AddMonths(1),
             _ => desde.AddMonths(1)
         };
     }
 }
+

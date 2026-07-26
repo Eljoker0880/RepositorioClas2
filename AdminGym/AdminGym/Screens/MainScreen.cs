@@ -1,11 +1,70 @@
 using AdminGym.Models;
 using AdminGym.Services;
 using Spectre.Console;
+using Spectre.Console.Rendering;
 
 namespace AdminGym.Screens;
 
+
 public class MainScreen(MiembroService miembroService, MembresiaService membresiaService)
 {
+    private void ActualizarMiembro()
+    {
+        LimpiarConsola();
+
+        int id = AnsiConsole.Ask<int>(
+            "Ingrese el ID del miembro:"
+        );
+
+        Miembro? miembro = _miembroService.FindById(id);
+
+        if (miembro == null)
+        {
+            AnsiConsole.MarkupLine(
+                "[red]Miembro no encontrado.[/]"
+            );
+            return;
+        }
+
+        AnsiConsole.MarkupLine(
+            $"Nombre actual: [yellow]{miembro.Nombre}[/]"
+        );
+
+        AnsiConsole.MarkupLine(
+            $"Apellido actual: [yellow]{miembro.Apellido}[/]"
+        );
+
+        AnsiConsole.MarkupLine(
+            $"Teléfono actual: [yellow]{miembro.Telefono}[/]"
+        );
+
+        miembro.Nombre = AnsiConsole.Ask<string>(
+            "Nuevo nombre:"
+        );
+
+        miembro.Apellido = AnsiConsole.Ask<string>(
+            "Nuevo apellido:"
+        );
+
+        miembro.Telefono = AnsiConsole.Ask<string>(
+            "Nuevo teléfono:"
+        );
+
+        bool actualizado = _miembroService.Update(miembro);
+
+        if (actualizado)
+        {
+            AnsiConsole.MarkupLine(
+                "[green]Miembro actualizado correctamente.[/]"
+            );
+        }
+        else
+        {
+            AnsiConsole.MarkupLine(
+                "[red]Error al actualizar.[/]"
+            );
+        }
+    }
     private readonly MiembroService _miembroService = miembroService;
     private readonly MembresiaService _membresiaService = membresiaService;
     private bool running = true;
@@ -13,10 +72,11 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
     private readonly string[] opcionesMenu =
     [
         "1. Agregar miembro",
-        "2. Buscar miembro",
-        "3. Mostrar inactivos",
-        "4. Eliminar",
-        "5. Salir"
+    "2. Buscar miembro",
+    "3. Mostrar inactivos",
+    "4. Actualizar miembro",
+    "5. Eliminar",
+    "6. Salir"
     ];
 
     public void Show()
@@ -39,11 +99,15 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
                     MostrarMiembrosInactivos();
                     break;
 
-                case "4. Eliminar":
+                case "4. Actualizar miembro":
+                    ActualizarMiembro();
+                    break;
+
+                case "5. Eliminar":
                     EliminarMiembro();
                     break;
 
-                case "5. Salir":
+                case "6. Salir":
                     running = false;
                     AnsiConsole.MarkupLine("[yellow]Fin de la aplicación.[/]");
                     break;
@@ -70,7 +134,7 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
         }
     }
 
-    private Table CrearTablaMenuResumen(int? limite = null)
+    private IRenderable CrearTablaMenuResumen(int? limite = null)
     {
         var table = new Table();
         table.Border(TableBorder.Rounded);
@@ -83,6 +147,15 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
         table.AddColumn(new TableColumn("[blue]Estado[/]").Width(22).NoWrap());
 
         List<Miembro> miembros = _miembroService.FindAll();
+        if (miembros.Count == 0)
+        {
+            return new Panel(
+                "[yellow]Aún no se han registrado miembros.[/]"
+            )
+            
+            .BorderColor(Color.Blue);
+        }
+
 
         if (limite.HasValue)
             miembros = miembros.Take(limite.Value).ToList();
@@ -226,17 +299,17 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
 
         string tipo = AnsiConsole.Prompt(
             new SelectionPrompt<string>()
-                .AddChoices("30 Segundos", "1 Día", "1 Semana", "1 Mes")
+                .AddChoices("1 Día", "1 Semana", "1 Mes")
         );
 
         DateTime inscripcion = DateTime.Now;
         DateTime vencimiento = _membresiaService.CalcularVencimiento(tipo, inscripcion);
 
-        int maxId = miembros.Count > 0 ? miembros.Max(c => c.id) : 0;
+
 
         Miembro nuevoMiembro = new Miembro
         {
-            id = maxId + 1,
+
             Nombre = nombre,
             Apellido = apellido,
             Telefono = telefono,
@@ -245,7 +318,7 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
 
         Membresia nuevaMembresia = new Membresia
         {
-            id = maxId + 1,
+
             Tipo = tipo,
             Inscripcion = inscripcion,
             Vencimiento = vencimiento,
@@ -289,9 +362,13 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
             .Start("Registrando miembro...", ctx =>
             {
                 Thread.Sleep(2000);
-                bool miembroCreado = _miembroService.Create(nuevoMiembro);
+                int idGenerado = _miembroService.Create(nuevoMiembro);
+
+                nuevaMembresia.id_miembro = idGenerado;
+
                 bool membresiaCreada = _membresiaService.Create(nuevaMembresia);
-                creado = miembroCreado && membresiaCreada;
+
+                creado = membresiaCreada;
             });
 
         if (creado)
@@ -495,10 +572,12 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
             if (!confirmar)
                 continue;
 
-            bool miembroEliminado = _miembroService.Delete(idEliminar);
-
             if (membresiaEliminar != null)
+            {
                 _membresiaService.Delete(membresiaEliminar.id);
+            }
+
+            bool miembroEliminado = _miembroService.Delete(idEliminar);
 
             if (miembroEliminado)
             {
@@ -584,7 +663,7 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
 
             string nuevoTipo = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
-                    .AddChoices("30 Segundos", "1 Día", "1 Semana", "1 Mes"));
+                    .AddChoices("1 Día", "1 Semana", "1 Mes"));
 
             DateTime ahora = DateTime.Now;
 
@@ -592,9 +671,18 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
             membresia.Inscripcion = ahora;
             membresia.Vencimiento = _membresiaService.CalcularVencimiento(nuevoTipo, ahora);
 
-            LimpiarConsola();
-            AnsiConsole.MarkupLine("[green]Miembro reinscrito correctamente.[/]");
+            bool actualizado = _membresiaService.Update(membresia);
 
+            LimpiarConsola();
+
+            if (actualizado)
+            {
+                AnsiConsole.MarkupLine("[green]Miembro reinscrito correctamente.[/]");
+            }
+            else
+            {
+                AnsiConsole.MarkupLine("[red]Error al actualizar la membresía.[/]");
+            }
             salirReinscripcion = true;
         }
     }
@@ -623,14 +711,19 @@ public class MainScreen(MiembroService miembroService, MembresiaService membresi
         AnsiConsole.Status()
             .Spinner(Spinner.Known.Dots)
             .SpinnerStyle(Style.Parse("green"))
-            .Start("Eliminando miembro...", ctx =>
-            {
-                Thread.Sleep(2000);
-                eliminado = _miembroService.Delete(id);
+.Start("Eliminando miembro...", ctx =>
+{
+    Thread.Sleep(2000);
 
-                if (eliminado && membresiaAEliminar != null)
-                    _membresiaService.Delete(membresiaAEliminar.id);
-            });
+    // Primero eliminamos la membresía
+    if (membresiaAEliminar != null)
+    {
+        _membresiaService.Delete(membresiaAEliminar.id);
+    }
+
+    // Después eliminamos el miembro
+    eliminado = _miembroService.Delete(id);
+});
 
         if (eliminado)
             AnsiConsole.MarkupLine($"[green]✔ Miembro con ID {id} eliminado correctamente.[/]");
